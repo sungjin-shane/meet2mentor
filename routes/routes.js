@@ -8,6 +8,14 @@ router.get('/', (req, res) => {
   res.render('home')
 })
 
+router.get('/mentorList', (req, res) => {
+  res.render('mentorList')
+})
+
+router.get('/menteeList', (req, res) => {
+  res.render('menteeList')
+})
+
 router.get('/properties', (req, res) => {
   db.getProperties()
     .then(properties => {
