@@ -4,6 +4,8 @@ const db = require('../db')
 
 const router = express.Router()
 
+var nodemailer = require('nodemailer')
+
 router.get('/', (req, res) => {
   res.render('home')
 })
@@ -14,6 +16,34 @@ router.get('/mentorList', (req, res) => {
 
 router.get('/menteeList', (req, res) => {
   res.render('menteeList')
+})
+
+// Node emailer test
+router.get('/sendEmail', (req, res) => {
+  // const id = req.params.email
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'globalmaster777@gmail.com',
+      pass: 'mirage0611'
+    }
+  })
+
+  const mailOptions = {
+    from: 'globalmaster777@gmail.com', // sender address
+    to: 'sjpark731015@gmail.com', // list of receivers
+    subject: 'Hi I am a English tutor', // Subject line
+    html: '<p>Good morning</p>'// plain text body
+  }
+
+  transporter.sendMail(mailOptions, function (err, info) {
+    if(err)
+      console.log(err)
+    else
+      console.log(info);
+ })
+
+  //res.render('Successfully sending email')
 })
 
 router.get('/properties', (req, res) => {

@@ -2761,6 +2761,14 @@ node-pre-gyp@~0.9.0:
     semver "^5.3.0"
     tar "^4"
 
+nodemailer-stub@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/nodemailer-stub/-/nodemailer-stub-1.0.1.tgz#17311e8124fa6b02b455774ebfe972fbba41a49c"
+
+nodemailer@^4.6.7:
+  version "4.6.7"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-4.6.7.tgz#b68de7f36d65618bdeeeb76234e3547d51266373"
+
 nodemon@^1.17.5:
   version "1.17.5"
   resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.17.5.tgz#e6a665c872fdf09d48bf2a81f3e85f8cfb39322a"
